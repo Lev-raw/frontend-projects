@@ -1,92 +1,1673 @@
-nav{
-    display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px 40px;
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav ul{
-     display: flex;
-     list-style: none;
-     gap: 20px;
-     margin: 0;
-     padding: 0;
+
+html {
+    scroll-behavior: smooth;
 }
-nav a {
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+a {
     text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    font-size: 14px;
+    color: inherit;
 }
-.btn-book {
-    background-color: #7a1f2b;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 4px;
+
+
+/* =====================================================
+   NAVIGATION
+   FIGMA MATCH
+===================================================== */
+
+.main-nav {
+    width: 100%;
+    height: 122px;
+
+    background: #ffffff;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+
+    padding: 0 150px;
+
+    position: relative;
+    z-index: 1000;
 }
-.dropdown{
-    display: none;
-    position: absolute;
-    background-color: white;
+
+
+/* =====================================================
+   LEFT NAVIGATION
+===================================================== */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+
     list-style: none;
-    padding: 10px 0;
-    margin: 0px;
-    min-width: 180px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    
+
+    margin: 0;
+    padding: 0;
+
+    gap: 32px;
+
+    justify-content: flex-start;
 }
-nav li {
+
+
+/* =====================================================
+   RIGHT NAVIGATION
+===================================================== */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    gap: 28px;
+
+    justify-content: flex-end;
+}
+
+
+/* =====================================================
+   NAVIGATION ITEMS
+===================================================== */
+
+.main-nav li {
     position: relative;
 }
 
-nav li:hover .dropdown {
-    display: block;
+
+/* =====================================================
+   NAVIGATION TEXT
+===================================================== */
+
+.main-nav li > a {
+    display: flex;
+    align-items: center;
+
+    color: #555555;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
 }
 
-.dropdown li {
-    padding: 8px 16px;
+.main-nav li > a:hover {
+    color: #8d111b;
 }
-  
-.hero {
+
+
+/* =====================================================
+   RED CHEVRONS
+===================================================== */
+
+.chevron {
+    display: inline-block;
+
+    margin-left: 7px;
+
+    color: #8d111b;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1;
+
     position: relative;
-    height: 500px;
-    overflow: hidden;
+    top: 0;
+}
+
+
+/* =====================================================
+   CENTER LOGO
+===================================================== */
+
+.logo-wrap {
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 0 48px;
+}
+
+.logo-wrap img {
+    display: block;
+
+    width: auto;
+    height: 82px;
+
+    object-fit: contain;
+    
+
+}
+
+
+/* =====================================================
+   BOOK NOW BUTTON
+===================================================== */
+
+.main-nav .btn-book {
+    width: 177px;
+    height: 54px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #8d111b;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    border-radius: 0;
+
+    transition: background 0.2s ease;
+}
+
+.main-nav .btn-book:hover {
+    background: #741019;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   SEARCH + PROFILE ICONS
+===================================================== */
+
+.search-btn  {
+    width: 24px;
+    height: 24px;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-btn {
+      width: 24px;
+    height: 24px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+.icon-btn svg {
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke: #8d111b;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: stroke 0.2s ease;
+}
+
+.icon-btn:hover svg {
+    stroke: #741019;
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.dropdown {
+    display: none;
+
+    position: absolute;
+
+    top: 28px;
+    left: -18px;
+
+    width: 215px;
+
+    padding: 14px 0;
+    margin: 0;
+
+    list-style: none;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 2000;
+}
+
+.dropdown li {
+    width: 100%;
+
+    padding: 10px 20px;
+}
+
+.dropdown li a {
+    display: block;
+
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+
+    color: #444444;
+}
+
+.dropdown li:hover {
+    background: #f7f7f7;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 515px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
 }
 
+
+/* =====================================================
+   HERO VIDEO
+===================================================== */
+
 .hero-video {
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    z-index: -1;
+
+    z-index: -2;
 }
+
+
+/* =====================================================
+   HERO DARK OVERLAY
+===================================================== */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.32);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content {
-    color: white;
-    max-width: 600px;
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5px;
 }
 
-.arrow-left, .arrow-right {
+
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.hero-content h1 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 50px;
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-content p {
+    margin: 0 0 28px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   HERO KNOW MORE BUTTON
+===================================================== */
+
+.hero-content .btn-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 162px;
+    height: 55px;
+
+    background: #8d111b;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    letter-spacing: 0;
+
+    border-radius: 0;
+
+    transition: background 0.2s ease;
+}
+
+.hero-content .btn-book:hover {
+    background: #741019;
+}
+
+
+/* =====================================================
+   HERO ARROWS
+===================================================== */
+
+.arrow-left,
+.arrow-right {
     position: absolute;
+
     top: 50%;
+
     transform: translateY(-50%);
-    background: none;
+
+    width: 30px;
+    height: 50px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
     border: none;
-    color: white;
-    font-size: 32px;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 48px;
+    font-weight: 200;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.arrow-left {
+    left: 135px;
+}
+
+.arrow-right {
+    right: 135px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   ABOUT POSTER
+===================================================== */
+
+.about-poster {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding: 34px 55px 42px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   RAJASHREE TOP SECTION
+===================================================== */
+
+.rajashree-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.03fr 1fr;
+
+    column-gap: 38px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.rajashree-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 270px;
+
+    z-index: 1;
+}
+
+
+/* PINK OFFSET BACKGROUND */
+
+.image-pink-bg {
+    position: absolute;
+
+    width: calc(100% - 10px);
+    height: calc(100% - 5px);
+
+    left: 24px;
+    top: 26px;
+
+    background: #f3eeee;
+
+    z-index: 0;
+}
+
+
+/* ACTUAL IMAGE */
+
+.rajashree-image img {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   RIGHT SIDE TEXT
+===================================================== */
+
+.rajashree-content {
+    position: relative;
+
+    padding-top: 8px;
+
+    color: #5c5c5c;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote-mark {
+    color: #a88d59;
+
+    font-family: Georgia, serif;
+
+    font-size: 43px;
+
+    font-weight: bold;
+
+    line-height: 20px;
+
+    height: 25px;
+
+    margin-bottom: 4px;
+}
+
+
+/* =====================================================
+   RAJASHREE TEXT
+===================================================== */
+
+.rajashree-content p {
+    margin: 0 0 15px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    color: #5f5f5f;
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.rajashree-name {
+    margin-top: 4px;
+}
+
+.rajashree-name h2 {
+    margin: 0;
+
+    color: #99151e;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.rajashree-name span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #666666;
+
+    font-size: 8px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   SAGA SECTION
+===================================================== */
+
+.saga-section {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 42px;
+}
+
+
+/* =====================================================
+   SAGA TITLE
+===================================================== */
+
+.saga-title {
+    margin: 0 0 17px;
+
+    color: #575757;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   SAGA TEXT
+===================================================== */
+
+.saga-text {
+    max-width: 1030px;
+
+    margin: 0 auto;
+
+    color: #626262;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: center;
+}
+
+
+.saga-text-second {
+    margin-top: 20px;
+
+    max-width: 900px;
+}
+
+
+/* =====================================================
+   SAGA BUTTON
+===================================================== */
+
+.saga-button {
+    display: flex;
+
+    width: 122px;
+    height: 31px;
+
+    margin: 18px auto 0;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #99151e;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.1px;
+
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.saga-button:hover {
+    background: #7d1018;
+}
+
+
+/* =====================================================
+   DECORATIVE ICONS
+===================================================== */
+
+.saga-icon {
+    position: absolute;
+
+    pointer-events: none;
+}
+
+.saga-icon svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: #e8cfd1;
+
+    stroke-width: 1.2;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* LEFT CAMERA */
+
+.saga-icon-left {
+    width: 52px;
+    height: 52px;
+
+    left: 0;
+
+    top: 48px;
+}
+
+
+/* RIGHT THEATRE */
+
+.saga-icon-right {
+    width: 53px;
+    height: 53px;
+
+    right: 0;
+
+    top: 42px;
+}
+
+
+/* MASK */
+
+.mask-icon {
+    width: 54px;
+    height: 54px;
+
+    left: 175px;
+
+    bottom: 1px;
+}
+
+
+/* MICROPHONE */
+
+.mic-icon {
+    width: 52px;
+    height: 52px;
+
+    right: 175px;
+
+    bottom: -3px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .about-poster {
+        max-width: calc(100% - 70px);
+
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .rajashree-section {
+        column-gap: 30px;
+    }
+
+    .mask-icon {
+        left: 120px;
+    }
+
+    .mic-icon {
+        right: 120px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .about-poster {
+        max-width: calc(100% - 40px);
+
+        padding: 30px;
+    }
+
+    .rajashree-section {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .rajashree-image,
+    .rajashree-image img {
+        height: 350px;
+    }
+
+    .rajashree-content p {
+        font-size: 11px;
+    }
+
+    .saga-title {
+        font-size: 26px;
+    }
+
+    .saga-text {
+        font-size: 10px;
+    }
+
+    .saga-icon-left,
+    .saga-icon-right {
+        display: none;
+    }
+
+    .mask-icon {
+        left: 20px;
+    }
+
+    .mic-icon {
+        right: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .about-poster {
+        max-width: 100%;
+
+        padding: 25px 20px 40px;
+    }
+
+    .rajashree-image,
+    .rajashree-image img {
+        height: 280px;
+    }
+
+    .image-pink-bg {
+        left: 15px;
+        top: 15px;
+    }
+
+    .quote-mark {
+        font-size: 38px;
+    }
+
+    .rajashree-content p {
+        font-size: 10px;
+    }
+
+    .saga-section {
+        padding-top: 35px;
+    }
+
+    .saga-title {
+        font-size: 23px;
+    }
+
+    .saga-text {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .mask-icon,
+    .mic-icon {
+        display: none;
+    }
+}
+
+/* =====================================================
+   SHOWTIME SECTION
+===================================================== */
+
+.showtime {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: #f6eeee;
+    padding: 40px 0 34px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* =====================================================
+   SHOWTIME HEADING
+===================================================== */
+
+.showtime-heading {
+    margin: 0 0 30px;
+    text-align: center;
+    color: #555555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* =====================================================
+   CARDS CONTAINER
+===================================================== */
+
+.showtime-cards {
+    width: calc(100% - 120px);
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* =====================================================
+   INDIVIDUAL CARD
+===================================================== */
+
+.showtime-card {
+    width: 100%;
+}
+
+/* =====================================================
+   SHOWTIME IMAGE
+===================================================== */
+
+.showtime-image {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.showtime-card h3 {
+    margin: 9px 0 4px;
+    color: #555555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.showtime-card p {
+    margin: 0;
+    max-width: 100%;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+/* =====================================================
+   CARD BUTTONS
+===================================================== */
+
+.showtime-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 102px;
+}
+
+.more-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 27px;
+
+    border: 1px solid #b88484;
+    background: transparent;
+
+    color: #8d111b;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+.showtime-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 27px;
+
+    background: #8d111b;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.more-info:hover {
+    background: #ffffff;
+}
+
+.showtime-book:hover {
+    background: #741019;
+}
+
+/* =====================================================
+   VIEW ALL
+===================================================== */
+
+.showtime-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.showtime-arrow {
+    border: none;
+    background: transparent;
+
+    color: #8d111b;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+    padding: 0;
+}
+
+.view-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 74px;
+    height: 32px;
+
+    background: #8d111b;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+}
+
+.view-all:hover {
+    background: #741019;
+}/* =====================================================
+   PERFORMANCE SPACES
+===================================================== */
+
+.performance-spaces {
+    width: 100%;
+    background: #ffffff;
+    padding: 32px 48px 30px;
+    margin: 0;
+}
+
+
+/* =====================================================
+   PERFORMANCE HEADER
+===================================================== */
+
+.performance-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+
+.performance-header h2 {
+    margin: 0;
+    color: #555555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   PERFORMANCE TABS
+===================================================== */
+
+.performance-tabs {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.performance-tab {
+    position: relative;
+
+    border: none;
+    background: transparent;
+
+    padding: 0 0 8px;
+
+    color: #222222;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
     cursor: pointer;
 }
 
-.arrow-left { left: 20px; }
-.arrow-right { right: 20px; }
-.bio{
+
+.performance-tab.active {
+    color: #8d111b;
+}
+
+
+.performance-tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 1px;
+
+    background: #8d111b;
+}
+
+
+/* =====================================================
+   PERFORMANCE MAIN CONTENT
+===================================================== */
+
+.performance-content {
+    width: 100%;
+}
+
+
+/* =====================================================
+   LEFT INFORMATION
+===================================================== */
+
+.performance-info {
+    width: 100%;
+}
+
+
+.space-item {
+    width: 100%;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+}
+
+
+.space-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   SPACE TITLE
+===================================================== */
+
+.space-item h3 {
+    margin: 0 0 6px;
+
+    color: #222222;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.space-item.active h3 {
+    color: #8d111b;
+}
+
+
+/* =====================================================
+   SPACE DESCRIPTION
+===================================================== */
+
+.space-item p {
+    margin: 0;
+
+    color: #666666;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 6.5px;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   ACTIVE RED LINE
+===================================================== */
+
+.space-item.active {
+    border-bottom: 1px solid #c98b8b;
+}
+
+
+
+
+
+/* =====================================================
+   PERFORMANCE SPACES
+===================================================== */
+
+.performance-spaces {
+    width: 100%;
+    background: #ffffff;
+    padding: 0 3.8vw 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.performance-header {
+    width: 100%;
     display: flex;
-    gap: 40px;
-    padding: 60px 40px;
+    justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.performance-header h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 500;
+    color: #555555;
+}
+
+
+/* =====================================================
+   STAGE / STUDIO TABS
+===================================================== */
+
+.performance-tabs {
+    display: flex;
+    align-items: flex-start;
+    gap: 75px;
+    margin-right: 55px;
+}
+
+
+/* Hide radio buttons */
+
+.performance-tabs input {
+    display: none;
+}
+
+
+/* Tab text */
+
+.performance-tabs label {
+    position: relative;
+    display: block;
+    padding-bottom: 22px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #555555;
+
+    cursor: pointer;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* Red underline */
+
+.performance-tabs label::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #8d0715;
+
+    transition: width 0.4s ease;
+}
+
+
+/* Active Stage */
+
+#stage-tab:checked + label {
+    color: #8d0715;
+}
+
+#stage-tab:checked + label::after {
+    width: 100%;
+}
+
+
+/* Active Studio */
+
+#studio-tab:checked + label {
+    color: #8d0715;
+}
+
+#studio-tab:checked + label::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONTENT AREA
+===================================================== */
+
+.space-content {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 31% 69%;
+
+    min-height: 590px;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+/* =====================================================
+   LEFT TEXT
+===================================================== */
+
+.space-text {
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
+
+.space-item {
+    max-width: 510px;
+    margin-bottom: 70px;
+}
+
+
+.space-item h3 {
+    margin: 0 0 18px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 500;
+
+    color: #000000;
+}
+
+
+.space-item p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #777777;
+}
+
+
+/* First heading is red */
+
+.active-item h3 {
+    color: #8d0715;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.space-divider {
+    width: 100%;
+    height: 1px;
+
+    background: #a40012;
+
+    margin: 15px 0 8px;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.space-image {
+    width: 100%;
+    height: 590px;
+
+    overflow: hidden;
+}
+
+
+.space-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.5s ease;
+}
+
+
+/* =====================================================
+   STUDIO HIDDEN BY DEFAULT
+===================================================== */
+
+.studio-content {
+    display: none;
+}
+
+.studio-content .space-item {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   RADIO BUTTON SWITCHING
+===================================================== */
+
+
+/* When STUDIO is selected */
+
+.performance-spaces:has(#studio-tab:checked) .stage-content {
+    display: none;
+}
+
+
+.performance-spaces:has(#studio-tab:checked) .studio-content {
+    display: grid;
+    animation: contentIn 0.6s ease forwards;
+}
+
+
+/* =====================================================
+   TRANSITION
+===================================================== */
+
+@keyframes contentIn {
+
+    0% {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+.space-image:hover img {
+    transform: scale(1.015);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .performance-header h2 {
+        font-size: 44px;
+    }
+
+    .performance-tabs {
+        gap: 40px;
+        margin-right: 20px;
+    }
+
+    .performance-tabs label {
+        font-size: 24px;
+    }
+
+    .space-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .space-text {
+        padding-right: 0;
+    }
+
+    .space-image {
+        height: 500px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .performance-spaces {
+        padding: 0 20px 30px;
+    }
+
+    .performance-header {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .performance-header h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .performance-tabs {
+        margin-right: 0;
+        gap: 35px;
+    }
+
+    .performance-tabs label {
+        font-size: 20px;
+    }
+
+    .space-item h3 {
+        font-size: 25px;
+    }
+
+    .space-item p {
+        font-size: 16px;
+    }
+
+    .space-image {
+        height: 350px;
+    }
+
 }

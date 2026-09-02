@@ -1,62 +1,965 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADITYA BIRLA</title>
-    <link rel="stylesheet" href="style.css">
-   
 
+    <title>ADITYA BIRLA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
+
 <body>
-  <nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Legacy</a>
-        <ul class="dropdown">
-                   <li><a href="#">Flashback Files</a></li>
-                   <li><a href="#">The Pioneers</a></li>
-                   <li><a href="#">Gallery</a></li>
-                   <li><a href="#">Digital Archives</a></li>
-    </ul></li>
-        <li><a href="#">Initiatives</a></li>
-        <li><a href="#">Spaces</a></li>
-        
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="main-nav">
+
+    <!-- LEFT NAVIGATION -->
+
+    <ul class="nav-left">
+
+        <li>
+            <a href="#">HOME</a>
+        </li>
+
+        <li>
+            <a href="#">
+                ABOUT
+                <span class="chevron">⌄</span>
+            </a>
+        </li>
+
+        <li class="dropdown-parent">
+
+            <a href="#">
+                LEGACY
+                <span class="chevron">⌄</span>
+            </a>
+
+            <ul class="dropdown">
+
+                <li>
+                    <a href="#">FLASHBACK FILES</a>
+                </li>
+
+                <li>
+                    <a href="#">THE PIONEERS</a>
+                </li>
+
+                <li>
+                    <a href="#">GALLERY</a>
+                </li>
+
+                <li>
+                    <a href="#">DIGITAL ARCHIVES</a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+            <a href="#">
+                INITIATIVES
+                <span class="chevron">⌄</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#">
+                SPACES
+                <span class="chevron">⌄</span>
+            </a>
+        </li>
+
     </ul>
-    <div >
-      <img src="images/logo.jpeg" alt="INT Aditya Birla Performing Arts Academy">
+
+
+
+    <!-- =====================================================
+         CENTER LOGO
+    ===================================================== -->
+
+    <div class="logo-wrap">
+
+        <img
+            src="images/logo.jpeg"
+            alt="INT Aditya Birla Performing Arts Academy"
+        >
+
     </div>
-      <ul>
-        <li><a href="#">Pulse & page</a></li>
-        <li><a href="#">Hello</a></li>
-        <li><a href="#" class="btn-book">Book Now</a></li>
-      </ul>
-  </nav>
-  <Section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="Videos/11954138_3840_2160_24fps.mp4" type="video/mp4">
+
+
+
+    <!-- =====================================================
+         RIGHT NAVIGATION
+    ===================================================== -->
+
+    <ul class="nav-right">
+
+        <li>
+
+            <a href="#">
+                PULSE &amp; PAGE
+                <span class="chevron">⌄</span>
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#">
+                HELLO
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#" class="btn-book">
+                BOOK NOW
+            </a>
+
+        </li>
+
+
+        <!-- SEARCH -->
+
+        <li class="search-btn">
+
+            <a
+                href="#"
+                class="icon-btn search-icon"
+                aria-label="Search"
+            >
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                    ></circle>
+
+                    <line
+                        x1="16.5"
+                        y1="16.5"
+                        x2="21"
+                        y2="21"
+                    ></line>
+
+                </svg>
+
+            </a>
+
+        </li>
+
+
+        <!-- PROFILE -->
+
+        <li class="profile-btn">
+
+            <a
+                href="#"
+                class="icon-btn profile-icon"
+                aria-label="Profile"
+            >
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="7.5"
+                        r="3.5"
+                    ></circle>
+
+                    <path
+                        d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"
+                    ></path>
+
+                </svg>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+
+        <source
+            src="Videos/11954138_3840_2160_24fps.mp4"
+            type="video/mp4"
+        >
+
     </video>
-    <button class="arrow-left">&#8249;</button>
+
+
+    <!-- LEFT ARROW -->
+
+    <button
+        class="arrow-left"
+        aria-label="Previous slide"
+    >
+        &#8249;
+    </button>
+
+
+    <!-- HERO CONTENT -->
+
     <div class="hero-content">
-       <h1>A Stage For Every Story</h1>
-        <p>Where India's performing arts meet contemporary creation.</p>
-        <a href="#" class="btn-book">Know more</a>
-         
+
+        <h1>
+            A Stage For Every Story
+        </h1>
+
+        <p>
+            Where India's performing arts meet contemporary creation.
+        </p>
+
+        <a href="#" class="btn-book">
+            Know more
+        </a>
+
     </div>
-     <button class="arrow-right">&#8250;</button>
-    
-  </Section>
-  <section class="bio">
-   <div class="bio-image">
-     <img src="images/rajeshree.jpeg" alt=" Smt.rajshree birla ">
-   </div>
-   <div class="bio-text">
-        <span class="quote-mark">&#8220;</span>
-        <p>At the heart of the Centre's journey is Smt. Rajashree Birla, Chairperson of the Aditya Birla Centre for Community Initiatives and Rural Development. Her leadership bridges philanthropy and culture, guided by a belief that service is not obligation but expression.</p>
-        <p>Inspired by the Gandhian principle of trusteeship, she views art as a public trust, something to be protected, shared, and passed forward.</p>
+
+
+    <!-- RIGHT ARROW -->
+
+    <button
+        class="arrow-right"
+        aria-label="Next slide"
+    >
+        &#8250;
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT / RAJASHREE / SAGA
+===================================================== -->
+
+<section class="about-poster">
+
+
+    <!-- =====================================================
+         RAJASHREE INTRO
+    ===================================================== -->
+
+    <div class="rajashree-section">
+
+
+        <!-- IMAGE -->
+
+        <div class="rajashree-image">
+
+            <div class="image-pink-bg"></div>
+
+            <img
+                src="images/rajeshree.jpeg"
+                alt="Smt. Rajashree Birla"
+            >
+
+        </div>
+
+
+
+        <!-- TEXT -->
+
+        <div class="rajashree-content">
+
+            <!-- QUOTE -->
+
+            <div class="quote-mark">
+                “
+            </div>
+
+
+            <!-- FIRST PARAGRAPH -->
+
+            <p>
+                At the heart of the Centre's journey is Smt. Rajashree Birla,
+                Chairperson of the Aditya Birla Centre for Community Initiatives
+                and Rural Development. Her leadership bridges philanthropy and
+                culture, guided by a belief that service is not obligation but expression.
+            </p>
+
+
+            <!-- SECOND PARAGRAPH -->
+
+            <p>
+                Inspired by the Gandhian principle of trusteeship, she views art
+                as a public trust, something to be protected, shared, and passed forward.
+                Her commitment continues the vision of her late husband, Shri Aditya
+                Vikram Birla, whose deep love for performing arts inspired generations
+                of artists. Honoured with recognitions including the Padma Bhushan,
+                Lal Bahadur Shastri Award for Excellence, and G20 EMPOWER Lifetime
+                Achievement Award, she remains a leading patron of India's cultural renaissance.
+            </p>
+
+
+            <!-- THIRD PARAGRAPH -->
+
+            <p>
+                Under her stewardship, INTABCAPA grows as a living heritage,
+                a place where the roots of tradition and the bloom of innovation
+                perform in perfect synchrony.
+            </p>
+
+
+
+            <!-- NAME -->
+
+            <div class="rajashree-name">
+
+                <h2>
+                    Smt. Rajashree Birla
+                </h2>
+
+                <span>
+                    Founder &amp; Chairperson
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
-  </section>
+
+
+
+    <!-- =====================================================
+         SAGA SECTION
+    ===================================================== -->
+
+    <div class="saga-section">
+
+
+        <!-- LEFT THEATRE ICON -->
+
+        <div class="saga-icon saga-icon-left">
+
+            <svg viewBox="0 0 80 80">
+
+                <circle
+                    cx="27"
+                    cy="18"
+                    r="7"
+                ></circle>
+
+                <circle
+                    cx="48"
+                    cy="18"
+                    r="7"
+                ></circle>
+
+                <rect
+                    x="17"
+                    y="29"
+                    width="38"
+                    height="32"
+                    rx="3"
+                ></rect>
+
+                <path
+                    d="M55 37 L68 32 L68 52 L55 48"
+                ></path>
+
+                <path
+                    d="M25 38 H45"
+                ></path>
+
+                <path
+                    d="M25 46 H40"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+
+        <!-- SAGA TITLE -->
+
+        <h2 class="saga-title">
+            INTABCAPA SAGA
+        </h2>
+
+
+
+        <!-- RIGHT THEATRE ICON -->
+
+        <div class="saga-icon saga-icon-right">
+
+            <svg viewBox="0 0 80 80">
+
+                <path
+                    d="M15 17 H65 V55 H15 Z"
+                ></path>
+
+                <path
+                    d="M15 17
+                       C22 25 29 25 36 17
+                       C43 25 50 25 57 17
+                       C61 22 63 22 65 17"
+                ></path>
+
+                <path
+                    d="M23 55 V65"
+                ></path>
+
+                <path
+                    d="M57 55 V65"
+                ></path>
+
+                <path
+                    d="M29 38
+                       C29 33 34 30 40 30
+                       C46 30 51 33 51 38
+                       C51 43 46 47 40 47
+                       C34 47 29 43 29 38 Z"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+
+        <!-- SAGA FIRST PARAGRAPH -->
+
+        <p class="saga-text">
+
+            INTABCAPA (INT Aditya Birla Centre for Performing Arts) builds on more
+            than eight decades of cultural legacy as a professionally managed
+            performing arts institution advancing theatre, music, dance, and
+            interdisciplinary practice. Its purpose-built infrastructure and
+            carefully shaped curatorial framework enable high-quality productions
+            across genres. The ongoing research and documentation initiatives
+            strengthen institutional memory and contribute to the wider performing
+            arts discourse.
+
+        </p>
+
+
+
+        <!-- SAGA SECOND PARAGRAPH -->
+
+        <p class="saga-text saga-text-second">
+
+            The Centre’s programming reflects a commitment to diversity and artistic
+            depth, fostering meaningful connections between artists and audiences
+            within a vibrant cultural ecosystem.
+
+        </p>
+
+
+
+        <!-- MASK / DRAMA ICON -->
+
+        <div class="saga-icon mask-icon">
+
+            <svg viewBox="0 0 80 80">
+
+                <path
+                    d="M15 27
+                       C22 22 31 22 39 27
+                       C37 42 29 52 17 54
+                       C13 45 13 36 15 27 Z"
+                ></path>
+
+                <path
+                    d="M40 31
+                       C48 26 58 27 65 32
+                       C65 46 58 55 47 57
+                       C42 50 40 41 40 31 Z"
+                ></path>
+
+                <circle
+                    cx="27"
+                    cy="37"
+                    r="2"
+                ></circle>
+
+                <circle
+                    cx="51"
+                    cy="39"
+                    r="2"
+                ></circle>
+
+                <path
+                    d="M21 45 Q27 49 33 45"
+                ></path>
+
+                <path
+                    d="M46 47 Q52 51 58 47"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+
+        <!-- MICROPHONE ICON -->
+
+        <div class="saga-icon mic-icon">
+
+            <svg viewBox="0 0 80 80">
+
+                <rect
+                    x="31"
+                    y="12"
+                    width="18"
+                    height="38"
+                    rx="9"
+                ></rect>
+
+                <path
+                    d="M22 35
+                       C22 49 30 57 40 57
+                       C50 57 58 49 58 35"
+                ></path>
+
+                <path
+                    d="M40 57 V68"
+                ></path>
+
+                <path
+                    d="M29 68 H51"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+
+        <!-- KNOW MORE -->
+
+        <a href="#" class="saga-button">
+            KNOW MORE
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOWTIME SECTION
      
+     IMPORTANT:
+     Showtime is OUTSIDE .about-poster.
+     This allows the pink background to stretch
+     across the webpage naturally.
+===================================================== -->
+
+<section class="showtime">
+
+
+    <!-- =====================================================
+         SHOWTIME HEADING
+    ===================================================== -->
+
+    <h2 class="showtime-heading">
+        Showtime
+    </h2>
+
+
+
+    <!-- =====================================================
+         SHOWTIME CARDS
+    ===================================================== -->
+
+    <div class="showtime-cards">
+
+
+        <!-- =================================================
+             CARD 1
+        ================================================= -->
+
+        <div class="showtime-card">
+
+
+            <!-- IMAGE -->
+
+            <img
+                src="images/dance_1.jpeg"
+                alt="Romeo"
+                class="showtime-image"
+            >
+
+
+            <!-- TITLE -->
+
+            <h3>
+                Echoes of Motion
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+
+            <p>
+                A raw exploration of human connection and physical expression told entirely through contemporary movement. Bound by shadow and light, a troupe of dancers transforms silent emotion into an explosive narrative of rhythm, passion, and grace.
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div class="showtime-buttons">
+
+                <a
+                    href="#"
+                    class="more-info"
+                >
+                    MORE INFO
+                </a>
+
+                <a
+                    href="#"
+                    class="showtime-book"
+                >
+                    BOOK NOW
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CARD 2
+        ================================================= -->
+
+        <div class="showtime-card">
+
+
+            <!-- IMAGE -->
+
+            <img
+                src="images/hike.jpeg"
+                alt="Hike"
+                class="showtime-image"
+            >
+
+
+            <!-- TITLE -->
+
+            <h3>
+                Beyond the Cloudline
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+
+            <p>
+                An epic visual journey of endurance and solitude set high above the edge of the world. Follow a lone explorer's trek across mist-shrouded peaks, uncovering the terrifying beauty and quiet triumph of standing at the peak of existence.
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div class="showtime-buttons">
+
+                <a
+                    href="#"
+                    class="more-info"
+                >
+                    MORE INFO
+                </a>
+
+                <a
+                    href="#"
+                    class="showtime-book"
+                >
+                    BOOK NOW
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         VIEW ALL
+    ===================================================== -->
+
+    <div class="showtime-view">
+
+
+        <!-- LEFT ARROW -->
+
+        <button
+            class="showtime-arrow"
+            aria-label="Previous"
+        >
+            &#8249;
+        </button>
+
+
+        <!-- VIEW ALL -->
+
+        <a
+            href="#"
+            class="view-all"
+        >
+            VIEW ALL
+        </a>
+
+
+        <!-- RIGHT ARROW -->
+
+        <button
+            class="showtime-arrow"
+            aria-label="Next"
+        >
+            &#8250;
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     PERFORMANCE SPACES
+===================================================== -->
+
+<section class="performance-spaces">
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <div class="performance-header">
+
+        <h2>Performance Spaces</h2>
+
+        <div class="performance-tabs">
+
+            <input
+                type="radio"
+                name="space-tab"
+                id="stage-tab"
+                checked
+            >
+
+            <label for="stage-tab">
+                Stage
+            </label>
+
+
+            <input
+                type="radio"
+                name="space-tab"
+                id="studio-tab"
+            >
+
+            <label for="studio-tab">
+                Studio
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         CONTENT WRAPPER
+         Both sections occupy the same space.
+         CSS controls which one is visible.
+    ================================================== -->
+
+    <div class="performance-content">
+
+
+        <!-- =================================================
+             STAGE CONTENT
+        ================================================== -->
+
+        <div class="space-content stage-content">
+
+            <!-- LEFT TEXT -->
+
+            <div class="space-text">
+
+                <div class="space-item active-item">
+
+                    <h3>
+                        Aditya Birla Theatre
+                    </h3>
+
+                    <p>
+                        A world-class proscenium theatre crafted for drama,
+                        dance, and productions. Its design balances acoustics,
+                        sightlines, and comfort, giving both artist and
+                        audience an immersive experience.
+                    </p>
+
+                </div>
+
+
+                <div class="space-divider"></div>
+
+
+                <div class="space-item">
+
+                    <h3>
+                        Mini Theatre
+                    </h3>
+
+                    <p>
+                        An intimate performance space for recitals, readings,
+                        and smaller showcases. Perfect for emerging artists
+                        and experimental works, it brings audiences closer
+                        to the art.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="space-image">
+
+                <img
+                    src="images/performance-theatre.jpg"
+                    alt="Aditya Birla Theatre"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STUDIO CONTENT
+        ================================================== -->
+
+        <div class="space-content studio-content">
+
+            <!-- LEFT TEXT -->
+
+            <div class="space-text">
+
+                <div class="space-item active-item">
+
+                    <h3>
+                        Rehearsal Studio
+                    </h3>
+
+                    <p>
+                        A professional practice space for ensembles, actors,
+                        and choreographers. These 9 studios are designed for
+                        preparation and experimentation, it mirrors the energy
+                        of the stage before the curtain rises.
+                    </p>
+
+                </div>
+
+
+                <div class="space-divider"></div>
+
+
+                <div class="space-item">
+
+                    <h3>
+                        Studios
+                    </h3>
+
+                    <p>
+                        A professional practice space for ensembles, actors,
+                        and choreographers.
+                    </p>
+
+                </div>
+
+
+                <div class="space-item">
+
+                    <h3>
+                        Audio Recording Studios
+                    </h3>
+
+                    <p>
+                        State-of-the-art studios equipped for high-quality
+                        sound production. Located on the first floor, they
+                        support music recording, dubbing, and post-production,
+                        ensuring that what begins in rehearsal is captured
+                        with precision.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="space-image">
+
+                <img
+                    src="images/performance-studio.jpg"
+                    alt="Rehearsal Studio"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 </body>
 </html>
