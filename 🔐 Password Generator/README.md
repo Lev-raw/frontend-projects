@@ -1,19 +1,111 @@
-<img width="1918" height="900" alt="image" src="https://github.com/user-attachments/assets/2a474b6c-1c50-4942-ad10-535969208056" />
+# 🔐 Password Generator
+
+A simple, responsive password generator built with **React and Vite**. Generate strong passwords instantly by adjusting the length and selecting the character types you want to include.
+
+## 📸 Preview
+
+<img width="1907" height="897" alt="image" src="https://github.com/user-attachments/assets/ca2566a6-919c-480b-ba23-a592a5dce612" />
 
 
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Generate random passwords instantly
+* Adjust password length using a slider
+* Include or exclude numbers
+* Include or exclude special characters
+* Copy the generated password to the clipboard
+* Automatically generate a new password when settings change
+* Clean and responsive user interface
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **React**
+* **Vite**
+* **JavaScript**
+* **CSS**
+* **React Hooks**
 
-## Expanding the Oxlint configuration
+## ⚛️ React Hooks Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This project was built to understand and practice different React Hooks:
+
+| Hook          | Purpose                                                            |
+| ------------- | ------------------------------------------------------------------ |
+| `useState`    | Manages password length, generated password, and character options |
+| `useCallback` | Memoizes the password generation function                          |
+| `useEffect`   | Regenerates the password whenever the selected settings change     |
+| `useRef`      | Accesses the password input field for copying                      |
+
+## 📂 Project Structure
+
+```text
+Password Generator/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Lev-raw/frontend-projects.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd frontend-projects/Password%20Generator
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in your terminal.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 🎯 Learning Goals
+
+Through this project, I practiced:
+
+* Managing component state with React Hooks
+* Creating reusable callback functions
+* Handling side effects in React
+* Using references to interact with DOM elements
+* Building a functional and responsive UI
+* Understanding how React updates the interface based on state changes
+
+## 👨‍💻 Author
+
+**Lev-raw**
+
+GitHub: [@Lev-raw](https://github.com/Lev-raw)
+
+## 📄 License
+
+This project is open-source and available for learning and personal use.
