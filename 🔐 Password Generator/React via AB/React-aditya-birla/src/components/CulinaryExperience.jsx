@@ -1,3 +1,0 @@
-const cards = [['/images/culinary-cafe.jpg', 'All-Day Café', 'A relaxed space for conversations, where artists and audiences share a dialogue over coffee.'], ['/images/culinary-restaurant.jpg', 'Fine Dining Restaurant', 'An elegant dining experience that complements the cultural ambience and indulgence of the Centre.']];
-function CulinaryExperience() { return <section className="culinary-experience"><h2 className="culinary-title">Culinary Experience</h2><div className="culinary-cards">{cards.map(([image, title, text]) => <article className="culinary-card" key={title}><img src={image} alt={title} /><div className="culinary-overlay"><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>; }
-export default CulinaryExperience;
